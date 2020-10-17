@@ -9,12 +9,13 @@ import {
 const Splash = () => {
     return (
         <div>
-            <nav class="navbar navbar-default">
-              <div class="container-fluid">
-                <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Instagram</a></li>
-                  <li><a href="#">Tik Tok</a></li>
-                </ul>
+            
+            <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+              <div class="container">
+                  <div class="navbar-header">
+                      <a asp-area="" href="/" class="navbar-brand">Instagram</a>
+                      <a asp-area="" href="View" class="navbar-brand">TikTok</a>
+                  </div>
               </div>
             </nav>
 
