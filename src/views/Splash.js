@@ -11,7 +11,7 @@ const Splash = () => {
     return (
         <div>
             
-            <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
               <div class="container">
                   <div class="navbar-header">
                       <a asp-area="" href="/" class="navbar-brand">Instagram</a>
@@ -35,15 +35,15 @@ const Splash = () => {
 
                 <div class="row mt-3">
                     <div class="col btn-group">
-                        <button type="button" class="btn btn-primary">Week</button>
-                        <button type="button" class="btn btn-primary">Month</button>
-                        <button type="button" class="btn btn-primary">All-Time</button>
+                        <button type="button" class="btn btn-info">Week</button>
+                        <button type="button" class="btn btn-info">Month</button>
+                        <button type="button" class="btn btn-info">All-Time</button>
                     </div>
                     <div class="col-md-1"></div>
                     <div class="col btn-group">
-                        <button type="button" class="btn btn-primary">Week</button>
-                        <button type="button" class="btn btn-primary">Month</button>
-                        <button type="button" class="btn btn-primary">All-Time</button>
+                        <button type="button" class="btn btn-info">Week</button>
+                        <button type="button" class="btn btn-info">Month</button>
+                        <button type="button" class="btn btn-info">All-Time</button>
                     </div>
                 </div>
 
