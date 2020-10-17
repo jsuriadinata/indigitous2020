@@ -9,10 +9,21 @@ import {
 const Splash = () => {
     return (
         <div>
-            Hello from splash! <br/>
-            <Link to="/view">View</Link>
+            <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Instagram</a></li>
+                  <li><a href="#">Tik Tok</a></li>
+                </ul>
+              </div>
+            </nav>
+
+            <div class="jumbotron text-center">
+                <h1>Instagram</h1>
+            </div>
+                <Link to="/view">View</Link>
         </div>
     )
 }
-    
+
 export default Splash

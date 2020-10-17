@@ -13,13 +13,11 @@ import {
 
 function App() {
   return (
-    
-    
     <Switch>
         {
               routes.map(({ exact, path, Component }) => {
                     return (
-                          <Route 
+                          <Route
                             exact={exact}
                             path={path}
                             key={path}
@@ -29,7 +27,7 @@ function App() {
               })
         }
     </Switch>
-    
+
   );
 }
 
