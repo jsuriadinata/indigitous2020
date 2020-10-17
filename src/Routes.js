@@ -1,6 +1,7 @@
 import Splash from "./views/Splash"
 import View from "./views/View"
 import Backend from "./views/BackendCalls"
+import Login from "./views/Login"
 
 const Routes = [
     {
@@ -19,6 +20,11 @@ const Routes = [
         path: "/backend",
         Component: Backend
     },
+    {
+        title: "Login",
+        path: "/login",
+        Component: Login
+    }
 ]
 
 export default Routes
