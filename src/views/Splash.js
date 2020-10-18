@@ -9,7 +9,7 @@ import InstagramEmbed from 'react-instagram-embed';
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
 import ToggleButton from 'react-bootstrap/ToggleButton'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
-import $ from "jquery"
+
 
 const Splash = () => {
     return (
@@ -38,7 +38,7 @@ const Splash = () => {
                 </div>
 
                 <div class="row mt-3">
-                    <div class="col text-center">
+                    <div class="col">
                         <ToggleButtonGroup class="btn-group d-flex w-100" type="radio" name="options" defaultValue={1}>
                             <ToggleButton value={1} variant="info">Week</ToggleButton>
                             <ToggleButton value={2} variant="info">Month</ToggleButton>
@@ -111,12 +111,6 @@ const Splash = () => {
     );
 }
 
-function buttonClicked() {
-    // Handle click event
-    $('button').on('click', function(){
-        $('button').removeClass('selected');
-        $(this).addClass('selected');
-    });
-}
+
 
 export default Splash

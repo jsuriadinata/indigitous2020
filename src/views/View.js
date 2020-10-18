@@ -8,11 +8,15 @@ import {
 } from "react-router-dom";
 import $ from "jquery"
 
+import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
+import ToggleButton from 'react-bootstrap/ToggleButton'
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
+
 const View = () => {
     return (
         <div>
 
-            <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
               <div class="container">
                   <div class="navbar-header">
                       <a asp-area="" href="/" class="navbar-brand">Instagram</a>
@@ -35,16 +39,20 @@ const View = () => {
                 </div>
 
                 <div class="row mt-3">
-                    <div class="col btn-group">
-                        <button type="button" class="btn btn-primary">Week</button>
-                        <button type="button" class="btn btn-primary">Month</button>
-                        <button type="button" class="btn btn-primary">All-Time</button>
+                    <div class="col">
+                        <ToggleButtonGroup class="btn-group d-flex w-100" type="radio" name="options" defaultValue={1}>
+                            <ToggleButton value={1} variant="info">Week</ToggleButton>
+                            <ToggleButton value={2} variant="info">Month</ToggleButton>
+                            <ToggleButton value={3} variant="info">All-Time</ToggleButton>
+                        </ToggleButtonGroup>
                     </div>
                     <div class="col-md-1"></div>
-                    <div class="col btn-group">
-                        <button type="button" class="btn btn-primary">Week</button>
-                        <button type="button" class="btn btn-primary">Month</button>
-                        <button type="button" class="btn btn-primary">All-Time</button>
+                    <div class="col">
+                        <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
+                            <ToggleButton value={1} variant="info">Week</ToggleButton>
+                            <ToggleButton value={2} variant="info">Month</ToggleButton>
+                            <ToggleButton value={3} variant="info">All-Time</ToggleButton>
+                        </ToggleButtonGroup>
                     </div>
                 </div>
 
