@@ -11,10 +11,12 @@ import $ from "jquery"
 import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
 import ToggleButton from 'react-bootstrap/ToggleButton'
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
+import CVSReader from 'react-csv-reader'
 
 const View = () => {
-    return (
+
         <div>
+            <CSVReader onFileLoaded={(data, fileInfo) => console.dir(data, fileInfo)} />
 
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
               <div class="container">

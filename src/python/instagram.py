@@ -27,4 +27,3 @@ df_time = df.sort_values(['post_time'], ascending = False)
 df_comment.to_csv('instagram_comment.csv')
 df_likes.to_csv('instagram_like.csv')
 df_time.to_csv('instagram_time.csv')
-    
