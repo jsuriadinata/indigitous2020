@@ -21,5 +21,10 @@ for item in items:
     post_likes = item['media_or_ad']['likes']['count']
     post_comments = item['media_or_ad']['comments']['count']
     df = df.append({'post_code':post_code,'post_time':post_time,'post_likes':post_likes, 'post_comments':post_comments,'post_link':post_link}, ignore_index = True)
-df.to_csv('instagram.csv')
+df_comment = df.sort_values(['post_comments'], ascending = False)
+df_likes = df.sort_values(['post_likes'], ascending = False)
+df_time = df.sort_values(['post_time'], ascending = False)
+df_comment.to_csv('instagram_comment.csv')
+df_likes.to_csv('instagram_like.csv')
+df_time.to_csv('instagram_time.csv')
     
