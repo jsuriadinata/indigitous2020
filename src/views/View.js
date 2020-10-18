@@ -1,11 +1,12 @@
 import React from 'react';
-import Iframe from 'react-iframe'
+import Iframe from 'react-iframe';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
 } from "react-router-dom";
+import $ from "jquery"
 
 const View = () => {
     return (
@@ -52,7 +53,8 @@ const View = () => {
                         <Iframe url="https://www.tiktok.com/embed/6883135381974437125"
                             width="320px"
                             height="660px"
-                            frameBorder = "0"
+                            frameBorder="0"
+                            allowFullScreen
                             id="myId"
                             className="myClassname"
                             display="initial"
@@ -62,13 +64,13 @@ const View = () => {
                     <div class="col">
                         <dl>
                             <dt>Date</dt>
-                            <dd>21 Jul 2018</dd>
+                            <dd id="ttLikedDate">21 Jul 2018</dd>
                             <dt class="mt-3">Likes</dt>
-                            <dd>14</dd>
+                            <dd id="ttLikedLikes">14</dd>
                             <dt class="mt-3">Comments</dt>
-                            <dd>14</dd>
+                            <dd id="ttLikedComments">14</dd>
                             <dt class="mt-3">Shares</dt>
-                            <dd>23</dd>
+                            <dd id="ttLikedShares">23</dd>
                         </dl>
                     </div>
                     <div class="col-md-1"></div>
@@ -76,7 +78,8 @@ const View = () => {
                         <Iframe url="https://www.tiktok.com/embed/6878721976144334086"
                             width="320px"
                             height="660px"
-                            frameBorder = "0"
+                            frameBorder="0"
+                            allowFullScreen
                             id="myId"
                             className="myClassname"
                             display="initial"
@@ -86,19 +89,19 @@ const View = () => {
                     <div class="col">
                         <dl>
                             <dt>Date</dt>
-                            <dd>11 Jul 2018</dd>
+                            <dd id="ttComDate">11 Jul 2018</dd>
                             <dt class="mt-3">Likes</dt>
-                            <dd>14</dd>
+                            <dd id="ttComLikes">14</dd>
                             <dt class="mt-3">Comments</dt>
-                            <dd>14</dd>
+                            <dd id="ttComComments">14</dd>
                             <dt class="mt-3">Shares</dt>
-                            <dd>45</dd>
+                            <dd id="ttComShares">45</dd>
                         </dl>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default View

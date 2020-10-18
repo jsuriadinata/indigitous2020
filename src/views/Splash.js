@@ -1,16 +1,20 @@
 import React from 'react';
-import InstagramEmbed from 'react-instagram-embed';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
 } from "react-router-dom";
+import InstagramEmbed from 'react-instagram-embed';
+import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
+import ToggleButton from 'react-bootstrap/ToggleButton'
+import ButtonToolbar from 'react-bootstrap/ButtonToolbar'
+import $ from "jquery"
 
 const Splash = () => {
     return (
         <div>
-            
+
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
               <div class="container">
                   <div class="navbar-header">
@@ -34,16 +38,20 @@ const Splash = () => {
                 </div>
 
                 <div class="row mt-3">
-                    <div class="col btn-group">
-                        <button type="button" class="btn btn-info">Week</button>
-                        <button type="button" class="btn btn-info">Month</button>
-                        <button type="button" class="btn btn-info">All-Time</button>
+                    <div class="col text-center">
+                        <ToggleButtonGroup class="btn-group d-flex w-100" type="radio" name="options" defaultValue={1}>
+                            <ToggleButton value={1} variant="info">Week</ToggleButton>
+                            <ToggleButton value={2} variant="info">Month</ToggleButton>
+                            <ToggleButton value={3} variant="info">All-Time</ToggleButton>
+                        </ToggleButtonGroup>
                     </div>
                     <div class="col-md-1"></div>
-                    <div class="col btn-group">
-                        <button type="button" class="btn btn-info">Week</button>
-                        <button type="button" class="btn btn-info">Month</button>
-                        <button type="button" class="btn btn-info">All-Time</button>
+                    <div class="col">
+                        <ToggleButtonGroup type="radio" name="options" defaultValue={1}>
+                            <ToggleButton value={1} variant="info">Week</ToggleButton>
+                            <ToggleButton value={2} variant="info">Month</ToggleButton>
+                            <ToggleButton value={3} variant="info">All-Time</ToggleButton>
+                        </ToggleButtonGroup>
                     </div>
                 </div>
 
@@ -65,11 +73,11 @@ const Splash = () => {
                     <div class="col">
                         <dl>
                             <dt>Date</dt>
-                            <dd>21 Jul 2018</dd>
+                            <dd id="igLikedDate">21 Jul 2018</dd>
                             <dt class="mt-3">Likes</dt>
-                            <dd>14</dd>
+                            <dd id="igLikedLikes">14</dd>
                             <dt class="mt-3">Comments</dt>
-                            <dd>14</dd>
+                            <dd id="igLikedComments">14</dd>
                         </dl>
                     </div>
                     <div class="col-md-1"></div>
@@ -90,17 +98,25 @@ const Splash = () => {
                     <div class="col">
                         <dl>
                             <dt>Date</dt>
-                            <dd>11 Jul 2018</dd>
+                            <dd id="igComDate">11 Jul 2018</dd>
                             <dt class="mt-3">Likes</dt>
-                            <dd>14</dd>
+                            <dd id="igComLikes">14</dd>
                             <dt class="mt-3">Comments</dt>
-                            <dd>14</dd>
+                            <dd id="igComComments">14</dd>
                         </dl>
                     </div>
                 </div>
             </div>
         </div>
-    )
+    );
+}
+
+function buttonClicked() {
+    // Handle click event
+    $('button').on('click', function(){
+        $('button').removeClass('selected');
+        $(this).addClass('selected');
+    });
 }
 
 export default Splash
